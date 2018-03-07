@@ -17,17 +17,20 @@
 			h4 WTC Montecito 38, Piso 28, Oficina 16, Col. Napoles Del. Benito Juarez, Ciudad de México
 	.formulario(flex-sm="40" flex="25" flex-xs="35")
 		h3 Contáctanos
-		form(ng-submit="nuevoContacto(contacto)" ng-hide="listo" layout-align="center center")
+		form(ng-submit="nuevoContacto(prospecto)" ng-hide="listo" layout-align="center center")
 			.md-padding(layout="column")
 				md-input-container(flex)
-					label Nombre
-					input(ng-model="contacto.nombre" style="color:white;" required)
+					label Nombres
+					input(ng-model="prospecto.nombre" style="color:white;" required)
+				md-input-container
+					label Apellidos
+					input(ng-model="prospecto.apellido" style="color:white;" required)
 				md-input-container(flex required)
 					label E-mail
-					input(ng-model="contacto.email" style="color:white;" required)
-				md-input-container(flex)
-					label Mensaje
-					textarea(ng-model="contacto.mensaje" md-maxlength="1000" rows="5" style="color:white;" required)
+					input(ng-model="prospecto.correo" style="color:white;" required)
+				md-input-container
+					label Teléfono
+					input(ng-model="prospecto.telefono" style="color:white;" required)
 			md-button(type="submit" flex)
 				| Enviar
 		.mensaje(ng-show="listo" style="width: 350px")

@@ -45,9 +45,13 @@ app.controller('mainCtrl', function ($scope, $state, $rootScope, $http, alertas,
 
     $scope.listo = false;
 
-    $scope.nuevoContacto = function(contacto){
+    $scope.nuevoContacto = function(prospecto){
 
-        Prospecto.crear(contacto).then(res => {
+        console.log('si llegue aqui')
+
+        Prospecto.crear(prospecto).then(res => {
+            console.log('regrese del servicio')
+
             $scope.listo = true;
         })
 
